@@ -1,0 +1,19 @@
+{
+  "name": "dynamic-programming",
+  "version": "1.0.0",
+  "description": "\"learn dynamic progrmming by coding challenges\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murthyganti/dynamic-programming.git"
+  },
+  "author": "Murthy Ganti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murthyganti/dynamic-programming/issues"
+  },
+  "homepage": "https://github.com/murthyganti/dynamic-programming#readme"
+}
