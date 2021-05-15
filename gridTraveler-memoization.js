@@ -31,6 +31,7 @@ console.log(gridTraveller(6,7));
 // Next step let's implement it by memoization.
 // also not number of ways to travel (m,n) grid and (n,m) grid are same -- number of rows and colums are switched
 
+// O(m*n) time complexcity and O(n+m) space complexcity.
 const gridTravellerMemo= (m,n,memo = {}) => {
     // key should be combination of m and n-- conact m & n with delimter.
     const key = m + "," + n;
