@@ -31,7 +31,7 @@ const fibMemo = (n, memo = {}) => {
 console.log(fib(1));
 console.log(fib(2));   
 console.log(fib(16)); // 987
-console.log(fib(20));  // 6765
-console.log(fib(40)); // 102334155
+console.log(fib(40));  //102334155
+console.log(fib(50)); // 
 
  
