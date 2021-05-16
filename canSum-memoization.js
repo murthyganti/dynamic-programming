@@ -1,16 +1,22 @@
-// canSum memoization
-// Write a function canSum(targetSum,arrayOfNumbers) tha takes in targetSm and an array of numbers as arguments.
-// it returns boolean to indicate whether or not it is possible to generate targetSum from array of given numbers.
+/**
+ * canSum memoization
+ * Write a function canSum(targetSum,arrayOfNumbers) tha takes in targetSm and an array of numbers as arguments.
+ * it returns boolean to indicate whether or not it is possible to generate targetSum from array of given numbers.
 
-// You can use element as many times as you want.
-// Assume all input numbers are non negative.
+ * You can use element as many times as you want.
+ * Assume all input numbers are non negative.
 
-// canSum(7,[2,4]) => should return false.
-// canSum(7,[3,4,0,7]) => should return true.
+ * canSum(7,[2,4]) => should return false.
+ * canSum(7,[3,4,0,7]) => should return true.
 
-// recursive way
-// space complexcity O(m) -- height of tree
-// Time complexcity O(n**m) -- where m is target sum, n is number of elements in array.
+ * recursive way
+ * space complexcity O(m) -- height of tree
+ * Time complexcity O(n**m) -- where m is target sum, n is number of elements in array.
+
+ * @param {*} targetSum 
+ * @param {*} arrayofNumbers 
+ * @returns 
+ */
 
 const canSum = (targetSum,arrayofNumbers) => {
     //base cases
@@ -25,16 +31,23 @@ const canSum = (targetSum,arrayofNumbers) => {
     return false;
 }
 
-// tests
+// tests -- if tatgetSum is large number it is going to take forever.
 console.log(canSum(3,[2,1,0,4]));
 console.log(canSum(5,[2,1,0,4]));
 console.log(canSum(7,[2,3]));
 console.log(canSum(7,[5,3,4]));
 console.log(canSum(8,[2,3,5]));
-//console.log(canSum(300,[5,199,12,1,6]));
+//console.log(canSum(300,[5,199,12,1,6])); 
 
-// space complexcity O(m) -- height of tree
-// Time complexcity O(m*n) -- where m is target sum, n is number of elements in array.
+/**
+ * space complexcity O(m) -- height of tree
+ * Time complexcity O(m*n) -- where m is target sum, n is number of elements in array.
+ * @param {*} targetSum 
+ * @param {*} arrayofNumbers 
+ * @param {*} memo 
+ * @returns 
+ */
+
 
 const canSumMemo = (targetSum,arrayofNumbers, memo = {}) => {
     // Note that arrayOfNumbers doesn't change only targetSum changes during recursion. so use that as key.
