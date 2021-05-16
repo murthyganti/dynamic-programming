@@ -7,9 +7,9 @@
  * bestSum(7,[3,4,2,7]) => should return 7
  * bestSum(8,[3,2,5]) => no of ways to generate 8 [2,2,2,2]. [5,3] or [3,3,2] .. it should return [5,3]
  * 
- * Recursive way 
- * Time complexcity O()
- * Space complexcity O()
+ * Recursive way - Brute force , m is targetSum, n is numbers.length.
+ * Time complexcity O(n^m * m) -- in genral in tree representation we branch for every element in numbers, m is height of the tree. There is also copy oprtation of array ( worse length is m)
+ * Space complexcity O(m*m),  stack depth is m and in  addtion every recursive call array of length m ( example: if targetSum is 10, and numbers array has 1, it could ne [1,1,1...10 times])
  */
 
 const bestSum = (targetSum,numbers) => {
@@ -39,3 +39,5 @@ console.log(bestSum(8,[2,3,5]));  // [5,3]
 console.log(bestSum(8,[1,4,5]));    // [4,4]
 // Takes longer
 //console.log(bestSum(100,[1,2,5,25])); //[25,25,25,25]
+
+// TODO Add bestSum with memoization way
