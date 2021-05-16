@@ -24,7 +24,7 @@ console.log(fib(8));
 
 const fibMemo = (n, memo = {}) => {
     if(n in memo) return memo[n]; // if n already exisits in memo return the value.
-    if(n <=2 ) return 1; // firs and second fibonacci numbers are 1 & 1.
+    if(n <=2 ) return 1; // first and second fibonacci numbers are 1 & 1.
     memo[n] = fibMemo(n-1,memo)+fibMemo(n-2,memo);
     return memo[n];
 };
