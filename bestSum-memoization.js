@@ -41,3 +41,33 @@ console.log(bestSum(8,[1,4,5]));    // [4,4]
 //console.log(bestSum(100,[1,2,5,25])); //[25,25,25,25]
 
 // TODO Add bestSum with memoization way
+
+
+
+const bestSumMemo = (targetSum,numbers, memo = {}) => {
+    if(targetSum in memo) return memo[targetSum];
+    if(targetSum === 0) return [] ;
+    if(targetSum < 0) return null;
+ 
+    let shortestCombination = null;
+    for (let num of numbers){
+        const remainder = targetSum - num;
+        const remainderCombination = bestSumMemo(remainder,numbers,memo);
+        if(remainderCombination !== null){
+             const combination = [...remainderCombination,num];
+             // if combination is shorter than current shortest .. update it.
+             if(shortestCombination === null ||  combination.length < shortestCombination.length){
+                 //update shortest combination
+                 shortestCombination = combination;
+             }
+        }
+    }
+    memo[targetSum] = shortestCombination;
+    return memo[targetSum];
+ }
+ 
+ // Tests
+ console.log(bestSumMemo(7,[5,3,4,7])); // returns [7]
+ console.log(bestSumMemo(8,[2,3,5]));  // [5,3]
+ console.log(bestSumMemo(8,[1,4,5]));    // [4,4]
+console.log(bestSumMemo(100,[1,2,5,25])); //[25,25,25,25]
