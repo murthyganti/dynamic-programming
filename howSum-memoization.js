@@ -46,7 +46,15 @@ console.log(howSum(7,[4,5]))      //  null
 // console.log(howSum(199,[4,5])) // it takes forever
 
 //Memoization
-
+/**
+ * m - targetSum, n - arrayofNumbers.length()
+ * Time complexcity -- O(n*m*m) => O(n*m^2) -- m times array copy operation.
+ * Space complexcity -- O(m*m) => O(m^2)
+ * @param {*} targetSum 
+ * @param {*} arrayOfnumbers 
+ * @param {*} memo 
+ * @returns 
+ */
 const howSumMemo = (targetSum,arrayOfnumbers, memo={}) => {
     if(targetSum in memo) return memo[targetSum];
     if(targetSum === 0) return [];
@@ -58,7 +66,7 @@ const howSumMemo = (targetSum,arrayOfnumbers, memo={}) => {
         if(remainderResult !== null){
             // return  all elements in remainderResultd  element on the edge here it is num
             // spread operator ... (if you are not famialr look up MDN JS reference)
-            memo[targetSum] = [...remainderResult,num];
+            memo[targetSum] = [...remainderResult,num]; // max length of any returned array is m
             return memo[targetSum];
         }
     }
