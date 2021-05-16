@@ -43,6 +43,16 @@ console.log(bestSum(8,[1,4,5]));    // [4,4]
 // TODO Add bestSum with memoization way
 
 
+/**
+ * Memoized complexcity -- m is targetSum, n is numbers.length.
+ * memo object has m number of keys.
+ * Time complexcity O(n * m * m) => O(m^2*n) -- in genral in tree representation we branch for every element in numbers, m is height of the tree. There is also copy oprtation of array ( worse length is m)
+ * Space complexcity O(m^2),  stack depth is m and in  addtion every recursive call array of length m ( example: if targetSum is 10, and numbers array has 1, it could ne [1,1,1...10 times])
+ * @param {*} targetSum 
+ * @param {*} numbers 
+ * @param {*} memo 
+ * @returns 
+ */
 
 const bestSumMemo = (targetSum,numbers, memo = {}) => {
     if(targetSum in memo) return memo[targetSum];
