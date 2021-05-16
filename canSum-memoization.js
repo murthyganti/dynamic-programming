@@ -33,6 +33,9 @@ console.log(canSum(7,[5,3,4]));
 console.log(canSum(8,[2,3,5]));
 //console.log(canSum(300,[5,199,12,1,6]));
 
+// space complexcity O(m) -- height of tree
+// Time complexcity O(m*n) -- where m is target sum, n is number of elements in array.
+
 const canSumMemo = (targetSum,arrayofNumbers, memo = {}) => {
     // Note that arrayOfNumbers doesn't change only targetSum changes during recursion. so use that as key.
     if (targetSum in memo) return memo[targetSum];
