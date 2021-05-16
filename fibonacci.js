@@ -16,10 +16,11 @@ console.log(fib(2));
 console.log(fib(6));
 console.log(fib(8));
  
-// The above apporach is O(2**n) in time and space, it takes forever for large numbers.
-// So let's use Memoization to speed up and make it 0(n) in space and time -https://en.wikipedia.org/wiki/Memoization
-// Memoization -- store function call results.
-// use JS object key will be arg to function, values will be return value.
+/* The above apporach is O(2**n) in time and space, it takes forever for large numbers.
+* So let's use Memoization to speed up and make it 0(n) in space and time -https://en.wikipedia.org/wiki/Memoization
+* Memoization -- store function call results.
+* use JS object key will be arg to function, values will be return value.
+*/
 
 const fibMemo = (n, memo = {}) => {
     if(n in memo) return memo[n]; // if n already exisits in memo return the value.
