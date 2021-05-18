@@ -52,4 +52,23 @@ console.log(sumFaster([]));
 console.log(sumFaster([1,10,2,-2]));
 
 
+/**
+ * Experiment
+ * Array of length 5000, filled with 1s
+ * 
+ */
+
+const input = new Array(5000).fill(1);
+
+const slowStart = Date.now();
+console.log(sum(input));
+const slowEnd = Date.now();
+console.log(`O(n^2) finishes in ${slowEnd-slowStart} ms`);
+
+const FastStart = Date.now();
+console.log(sumFaster(input));
+const FastEnd = Date.now();
+console.log(`O(n) finishes in ${FastEnd-FastStart} ms`);
+
+
 
