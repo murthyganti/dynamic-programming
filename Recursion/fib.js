@@ -10,8 +10,8 @@
  * fib(3) => returns 2;
  * fib(7) => returns 13;
  * For very large n -- please refer to dynamic programming solution.
- * Time Complexity :
- * Space Complexity: 
+ * Time Complexity : O(2^n) ( every call to fib makes two recursive calls - for each n)
+ * Space Complexity: O(n) -- number of stack frames used is max stack depth of n
  * This is an example of multi branch recurison -- recursive call leads to two recursive calls.
  * fib(n) = fib(n-1) + fib(n-2); -- you can think of it as binary tree.
  */
