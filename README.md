@@ -4,6 +4,8 @@
 - Recursive Sum: Code Implementation & Complexity Analysis
 - Optimizing Array & String Algorithms , Time Comparison of Slow & Fast Solutions
 - Multibranch Recursion: Fibonacci Code Implementation & Complexity Analysis
+- Combintations & Complexity Analysis
+- Permutations & Complexity Analysis
 
 # dynamic-progamming
 Dynamic Programming (DP) is an algorithmic technique for solving an optimization problem by breaking it down into simpler subproblems and utilizing the fact that the optimal solution to the overall problem depends upon the optimal solution to its subproblems

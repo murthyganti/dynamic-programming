@@ -2,8 +2,8 @@
  * Permutation is a collection of things wher order matters.
  * Example: For array [a,b,c] ,permutations are [a,b,c],[a,c,b],[c,a,b],[c,b,a],[b,a,c],[b,c,a]
  * So given set of n things, there are n! (n factorial) permutations.
- * Time Complexity: O()
- * Space Complexity: O()
+ * Time Complexity: O(n!)
+ * Space Complexity: O(n^2) -- n stackframes and each slice may have max array of length n.
  * Takes input array and returns 2D array with each possible permutation array as element.
  */
 
