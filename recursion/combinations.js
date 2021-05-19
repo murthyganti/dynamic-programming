@@ -3,9 +3,9 @@
  *  Here we determine all combinations  - Javascript Implementation Using Recursion
  *  example: array [a,b,c] => should return [],[a],[b],[c],[a,b],[a,c],[b,c],[a,b,c] , total 8 combintations.
  *  means if there n things in an array -- there are 2^n possible combinations.
- *  Time Complexity
- *  Space Complexity
- */
+ *  Time Complexity O(2^n) => number of iternations we make through all of recusive calls is 2^n.
+ *  Space Complexity O(n*n-1) => O(n^2) -- one recusive call to next we are shrinking depth by 1, that gives us n stack frames, in addition to that each stack frame has n-1 elements
+  */
 
 
  
